@@ -6,3 +6,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include <macify>
 #Include <moom>
+#Include <caps_lock_mode>
