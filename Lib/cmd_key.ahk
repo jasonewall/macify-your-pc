@@ -35,6 +35,7 @@ $!0::SendInput ^0
 
 ; Slack Quick open
 !k::SendInput ^k
++!k::SendInput +^k ; start dm
 
 ; Clipboard operations
 !c::SendInput ^c
