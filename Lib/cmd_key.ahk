@@ -14,7 +14,7 @@
 !n::SendInput ^n ; New file/window depending on app
 !+n::SendInput ^+n ; New window/new incognito window
 !w::SendInput ^w ; Close tab in chrome/editor in vscode and probably sublime/atom
-!h::SendInput #{Down} ; Hide window - no windows equivalent.. so be prepared to hit it twice
+!h::SendInput !{Esc} ; Hide window
 !m::SendInput #{Down} ; Minimize current window
 !+w::SendInput !{F4} ; Close all tabs in current window in chrome/close project in vscode/atom/sublime.
                      ; Since is a Alt+F4 binding it also is an easy fall back for when the Cmd+W reflex doesn't work

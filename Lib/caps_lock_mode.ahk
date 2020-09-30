@@ -38,4 +38,12 @@ ToggleCapsLockState() {
 ToggleCapsLockCtrlMode() {
     global CapsLockCtrlMode
     CapsLockCtrlMode := (CapsLockCtrlMode = "T") ? "F" : "T"
+    mode_desc := (CapsLockCtrlMode = "T") ? "On" : "Off"
+    tool_tip := Format("CapsLock Is Control: {:s}", mode_desc)
+    ToolTip, %tool_tip%, 500, 500
+    SetTimer, RemoveCapsLockCtrlToolTip, -1500
 }
+
+RemoveCapsLockCtrlToolTip:
+    ToolTip
+    return
