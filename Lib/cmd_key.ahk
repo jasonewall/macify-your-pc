@@ -33,9 +33,10 @@ $!8::SendInput ^8
 $!9::SendInput ^9
 $!0::SendInput ^0
 
-; Slack Quick open
-!k::SendInput ^k
+; Slack
+!k::SendInput ^k ; Quick open
 +!k::SendInput +^k ; start dm
+!Up::SendInput ^{Up} ; edit last message
 
 ; Clipboard operations
 !c::SendInput ^c
