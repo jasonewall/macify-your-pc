@@ -7,3 +7,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include <cmd_key>
 #Include <moom>
 #Include <caps_lock_mode>
+#Include <media_controls>
