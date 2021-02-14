@@ -10,7 +10,6 @@
 
 !o::SendInput ^o ; Open
 !s::SendInput ^s ; Save
-!BS::SendInput Del ; Delete keys, Because command backspace does this in mac
 
 !n::SendInput ^n ; New file/window depending on app
 !+n::SendInput ^+n ; New window/new incognito window
@@ -62,7 +61,7 @@ $#+Left::SendInput +^{Left}
 $#+Right::SendInput +^{Right}
 
 ; Delete files in Finder/Explorer
-$!BS::SendInput !{Delete}
+$!BS::SendInput {Delete}
 
 !z::SendInput ^z ; Cmd+Z undo
 !+z::SendInput ^y ; Cmd+shift+z redo
