@@ -8,4 +8,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include <caps_lock_mode>
 #Include <media_controls>
 
-#Include <keyboards/windows_ansi>
+#Include <keyboards/current>
