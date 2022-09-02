@@ -93,7 +93,6 @@ $#BS::SendInput {Delete}
 #MButton::SendInput {LWin down}{Tab}{LWin up}
 
 LWin & Tab::AltTab
-#+Tab::ShiftAltTab
 
 ; my personal moom hotkeys
 ; my activation shortcut is option+shift+m
