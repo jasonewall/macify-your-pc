@@ -1,4 +1,6 @@
 ﻿; Make a bunch of MacOS style keyboard shortcuts work on windows
+; Assumes a layout of a standard "Windows keyboard" where the modifier keys are:
+;       Ctrl Windows/Super Alt Space Alt ????? Ctrl
 ; Basically if your muscle memory is used to hitting the Cmd key (which is alt on a windows keyboard)
 ; These will work for you
 
