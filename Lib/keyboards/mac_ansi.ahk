@@ -98,7 +98,7 @@ Shift & Tab::ShiftAltTab
 ; my personal moom hotkeys
 ; my activation shortcut is option+shift+m
 ; Space
-+!m::MoomActivate()
+$+!m::MoomActivate()
 
 ; Not all keyboards have media controls
 ; These aren't really replicating anything standard from MacoS
