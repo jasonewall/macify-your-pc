@@ -90,3 +90,8 @@ $!BS::SendInput {Delete}
 
 ; cmd + middle mouse button goes to Mission Control for me in mac - so the closest thing in windows is WinKey+Tab
 !MButton::SendInput {LWin down}{Tab}{LWin up}
+
+; my personal moom hotkeys
+; my activation shortcut is option+shift+m
+; Space
++#m::MoomActivate()

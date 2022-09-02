@@ -1,7 +1,3 @@
-; my personal moom hotkeys
-; my activation shortcut is option+shift+m
-; Space
-+#m::MoomActivate()
 
 MoomActivate() {
     timeout := 2.5
