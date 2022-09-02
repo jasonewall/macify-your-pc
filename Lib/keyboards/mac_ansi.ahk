@@ -25,74 +25,74 @@
 #q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
 
 ; Quick Tab switching in chrome, also workspace switching in slack
-$!1::SendInput ^1
-$!2::SendInput ^2
-$!3::SendInput ^3
-$!4::SendInput ^4
-$!5::SendInput ^5
-$!6::SendInput ^6
-$!7::SendInput ^7
-$!8::SendInput ^8
-$!9::SendInput ^9
-$!0::SendInput ^0
+$#1::SendInput ^1
+$#2::SendInput ^2
+$#3::SendInput ^3
+$#4::SendInput ^4
+$#5::SendInput ^5
+$#6::SendInput ^6
+$#7::SendInput ^7
+$#8::SendInput ^8
+$#9::SendInput ^9
+$#0::SendInput ^0
 
 ; Slack
-!k::SendInput ^k ; Quick open
-+!k::SendInput +^k ; start dm
-!Up::SendInput ^{Up} ; edit last message
+#k::SendInput ^k ; Quick open
++#k::SendInput +^k ; start dm
+#Up::SendInput ^{Up} ; edit last message
 
 ; Clipboard operations
-!c::SendInput ^c
-!v::SendInput ^v
-!x::SendInput ^x
+#c::SendInput ^c
+#v::SendInput ^v
+#x::SendInput ^x
 
 ; Common formatting shortcuts
-!b::SendInput ^b
-!i::SendInput ^i
-!u::SendInput ^u
+#b::SendInput ^b
+#i::SendInput ^i
+#u::SendInput ^u
 
 ; Text navigation from Mac
-$!Left::SendInput {Home}
-$!Right::SendInput {End}
-$#Left::SendInput ^{Left}
-$#Right::SendInput ^{Right}
+$#Left::SendInput {Home}
+$#Right::SendInput {End}
+$!Left::SendInput ^{Left}
+$!Right::SendInput ^{Right}
 
 ; Text selection
-$!+Left::SendInput +{Home}
-$!+Right::SendInput +{End}
-$#+Left::SendInput +^{Left}
-$#+Right::SendInput +^{Right}
+$#+Left::SendInput +{Home}
+$#+Right::SendInput +{End}
+$!+Left::SendInput +^{Left}
+$!+Right::SendInput +^{Right}
 
 ; Delete files in Finder/Explorer
-$!BS::SendInput {Delete}
+$#BS::SendInput {Delete}
 
-!z::SendInput ^z ; Cmd+Z undo
-!+z::SendInput ^y ; Cmd+shift+z redo
+#z::SendInput ^z ; Cmd+Z undo
+#+z::SendInput ^y ; Cmd+shift+z redo
 
-!t::SendInput ^t ; New tab in chrome
-!+t::SendInput ^+t ; re-open recently closed tabs in chrome, re-open recently closed editor in vscode/atom/sublime
+#t::SendInput ^t ; New tab in chrome
+#+t::SendInput ^+t ; re-open recently closed tabs in chrome, re-open recently closed editor in vscode/atom/sublime
 
-!r::SendInput {F5} ; refresh
-!+r::SendInput ^{F5} ; hard refresh
-!l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
-!,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
+#r::SendInput {F5} ; refresh
+#+r::SendInput ^{F5} ; hard refresh
+#l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
+#,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
-!f::SendInput ^f ; cmd+f find in most apps
+#f::SendInput ^f ; cmd+f find in most apps
 
 ; cmd+shift+[ & ] for tab navigation in chrome - can customize keyboard shortcuts in vscode so it works there too
-!+]::SendInput ^{Tab}
-!+[::SendInput ^+{Tab}
+#+]::SendInput ^{Tab}
+#+[::SendInput ^+{Tab}
 
-<!`::AltTab ; cmd+backtick - this isn't an exact equivalent to the keyboard shortcut in mac (switch between windows within the same app)
+<#`::AltTab ; cmd+backtick - this isn't an exact equivalent to the keyboard shortcut in mac (switch between windows within the same app)
             ;                but it rewards the existing muscle wiring with similar functionality
 
-!LButton::SendInput ^{LButton} ; for opening links in new tabs for Chrome mostly
+#LButton::SendInput ^{LButton} ; for opening links in new tabs for Chrome mostly
 
 
 ; cmd + middle mouse button goes to Mission Control for me in mac - so the closest thing in windows is WinKey+Tab
-!MButton::SendInput {LWin down}{Tab}{LWin up}
+#MButton::SendInput {LWin down}{Tab}{LWin up}
 
 ; my personal moom hotkeys
 ; my activation shortcut is option+shift+m
 ; Space
-+#m::MoomActivate()
++!m::MoomActivate()
