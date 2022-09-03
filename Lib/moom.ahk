@@ -17,10 +17,10 @@ MoomKeyDown(ih, VK, SC) {
     vksc := Format("vk{:x}sc{:x}", VK, SC)
     key := GetKeyName(vksc)
     Switch key {
-        Case "Left":
+        Case "Left", "h":
             SendInput #+{Left}
             ih.Timeout := timeout
-        Case "Right":
+        Case "Right", "l":
             SendInput #+{Right}
             ih.Timeout := timeout
         Case "Space":
