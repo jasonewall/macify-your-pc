@@ -76,7 +76,8 @@ $#BS::SendInput {Delete}
 
 #r::SendInput {F5} ; refresh
 #+r::SendInput ^{F5} ; hard refresh
-$#l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
+; Win + L needs some special registry changes to function so just use alt like the windows layout :(
+!l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
 #,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
 #f::SendInput ^f ; cmd+f find in most apps
