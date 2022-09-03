@@ -1,7 +1,5 @@
-; my personal moom hotkeys
-; my activation shortcut is option+shift+m
-; Space
-+#m::
+
+MoomActivate() {
     timeout := 2.5
     ih := InputHook("B", "{Escape}")
     ih.NotifyNonText := true
@@ -12,6 +10,7 @@
     ToolTip Space - Maximize`n0 - Restore Window`n← - Move One Screen to the left`n→ - Move one screen to the right, 500, 500
     ih.Start()
     return
+}
 
 MoomKeyDown(ih, VK, SC) {
     timeout := 2.5

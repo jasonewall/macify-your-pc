@@ -1,4 +1,6 @@
 ﻿; Make a bunch of MacOS style keyboard shortcuts work on windows
+; Assumes a layout of a standard "Windows keyboard" where the modifier keys are:
+;       Ctrl Windows/Super Alt Space Alt ????? Ctrl
 ; Basically if your muscle memory is used to hitting the Cmd key (which is alt on a windows keyboard)
 ; These will work for you
 
@@ -88,3 +90,19 @@ $!BS::SendInput {Delete}
 
 ; cmd + middle mouse button goes to Mission Control for me in mac - so the closest thing in windows is WinKey+Tab
 !MButton::SendInput {LWin down}{Tab}{LWin up}
+
+; my personal moom hotkeys
+; my activation shortcut is option+shift+m
+; Space
++#m::MoomActivate()
+
+; Not all keyboards have media controls
+; These aren't really replicating anything standard from MacoS
+; Just something standard I would like for convenience in my Windows machines
+
+#+P::Send {Media_Play_Pause}
+#+[::Send {Media_Prev}
+#+]::Send {Media_Next}
+#+=::Send {Volume_Up}
+#+-::Send {Volume_Down}
+#+0::Send {Volume_Mute}
