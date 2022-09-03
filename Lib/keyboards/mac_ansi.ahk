@@ -24,8 +24,6 @@
                      ; in most other apps in windows.
 #q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
 
-#l::SendInput !d ; Focus and highlight location in Chrome
-
 ; Quick Tab switching in chrome, also workspace switching in slack
 $#1::SendInput ^1
 $#2::SendInput ^2
@@ -78,7 +76,7 @@ $#BS::SendInput {Delete}
 
 #r::SendInput {F5} ; refresh
 #+r::SendInput ^{F5} ; hard refresh
-#l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
+$#l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
 #,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
 #f::SendInput ^f ; cmd+f find in most apps
