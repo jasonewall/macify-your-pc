@@ -7,7 +7,7 @@ MoomActivate() {
     ih.KeyOpt("{Space}0{Left}{Right}", "N")
     ih.OnKeyDown := Func("MoomKeyDown")
     ih.OnEnd := Func("MoomExit")
-    ToolTip Space - Maximize`n0 - Restore Window`n← - Move One Screen to the left`n→ - Move one screen to the right, 500, 500
+    ToolTip Space - Maximize`n0 - Restore Window`n<- - Move One Screen to the left`n-> - Move one screen to the right, 500, 500
     ih.Start()
     return
 }
@@ -17,10 +17,10 @@ MoomKeyDown(ih, VK, SC) {
     vksc := Format("vk{:x}sc{:x}", VK, SC)
     key := GetKeyName(vksc)
     Switch key {
-        Case "Left", "h":
+        Case "Left", "H":
             SendInput #+{Left}
             ih.Timeout := timeout
-        Case "Right", "l":
+        Case "Right", "L":
             SendInput #+{Right}
             ih.Timeout := timeout
         Case "Space":
