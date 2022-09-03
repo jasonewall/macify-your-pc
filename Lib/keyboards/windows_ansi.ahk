@@ -23,6 +23,8 @@
                      ; in most other apps in windows.
 !q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
 
+!l::SendInput !d ; Focus and highlight location in Chrome
+
 ; Quick Tab switching in chrome, also workspace switching in slack
 $!1::SendInput ^1
 $!2::SendInput ^2
