@@ -89,6 +89,7 @@ $#BS::SendInput {Delete}
 
 <#`::ShiftAltTab ; cmd+backtick - this isn't an exact equivalent to the keyboard shortcut in mac (switch between windows within the same app)
                  ;                but it rewards the existing muscle wiring with similar functionality
+                 ;                It also solves the problem of not being able to create triad shortcuts for shift alt tab with AHK
 
 #LButton::SendInput ^{LButton} ; for opening links in new tabs for Chrome mostly
 
