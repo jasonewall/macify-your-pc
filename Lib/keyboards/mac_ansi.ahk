@@ -60,6 +60,7 @@ $!Right::SendInput ^{Right}
 #End::SendInput ^{End}
 
 ; Text selection
+#a::SendInput ^a
 $#+Left::SendInput +{Home}
 $#+Right::SendInput +{End}
 $!+Left::SendInput +^{Left}
@@ -86,8 +87,9 @@ $#BS::SendInput {Delete}
 #+]::SendInput ^{Tab}
 #+[::SendInput ^+{Tab}
 
-<#`::AltTab ; cmd+backtick - this isn't an exact equivalent to the keyboard shortcut in mac (switch between windows within the same app)
-            ;                but it rewards the existing muscle wiring with similar functionality
+<#`::ShiftAltTab ; cmd+backtick - this isn't an exact equivalent to the keyboard shortcut in mac (switch between windows within the same app)
+                 ;                but it rewards the existing muscle wiring with similar functionality
+                 ;                It also solves the problem of not being able to create triad shortcuts for shift alt tab with AHK
 
 #LButton::SendInput ^{LButton} ; for opening links in new tabs for Chrome mostly
 
@@ -109,9 +111,11 @@ $+!m::MoomActivate()
 ; These aren't really replicating anything standard from MacoS
 ; Just something standard I would like for convenience in my Windows machines
 
-!+P::Send {Media_Play_Pause}
+; !+P::Send {Media_Play_Pause}
 !+[::Send {Media_Prev}
 !+]::Send {Media_Next}
 !+=::Send {Volume_Up}
 !+-::Send {Volume_Down}
 !+0::Send {Volume_Mute}
+
+$#+P::SendInput !+P
