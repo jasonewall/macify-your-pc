@@ -60,6 +60,7 @@ $#Left::SendInput ^{Left}
 $#Right::SendInput ^{Right}
 
 ; Text selection
+$!a::SendInput ^a
 $!+Left::SendInput +{Home}
 $!+Right::SendInput +{End}
 $#+Left::SendInput +^{Left}
