@@ -24,6 +24,8 @@
 !q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
 
 ; Quick Tab switching in chrome, also workspace switching in slack
+
+#IfWinNotActive ahk_class StarCraft II
 $!1::SendInput ^1
 $!2::SendInput ^2
 $!3::SendInput ^3
@@ -34,6 +36,7 @@ $!7::SendInput ^7
 $!8::SendInput ^8
 $!9::SendInput ^9
 $!0::SendInput ^0
+#IfWinNotActive
 
 ; Slack
 !k::SendInput ^k ; Quick open
