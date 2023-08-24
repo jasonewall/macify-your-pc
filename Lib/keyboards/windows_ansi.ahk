@@ -25,6 +25,11 @@
 
 ; Quick Tab switching in chrome, also workspace switching in slack
 
+#IfWinActive ahk_exe Chrome.exe
+$!g::SendInput {F3}
+$+!g::SendInput +{F3}
+#IfWinActive
+
 #IfWinNotActive ahk_class StarCraft II
 $!1::SendInput ^1
 $!2::SendInput ^2
