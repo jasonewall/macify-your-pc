@@ -25,8 +25,8 @@
 #q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
 
 #IfWinActive ahk_exe Chrome.exe
-$#g::SendInput {F3}
-$+#g::SendInput +{F3}
+#g::SendInput {F3}
++#g::SendInput +{F3}
 #IfWinActive
 
 ; Quick Tab switching in chrome, also workspace switching in slack
