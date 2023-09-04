@@ -29,7 +29,7 @@
 $!g::SendInput {F3}
 $+!g::SendInput +{F3}
 $#!i::SendInput {F12}
-!+c::SendInput ^+C
+$!+c::SendInput ^+C
 #IfWinActive
 
 #IfWinNotActive ahk_class StarCraft II
