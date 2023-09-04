@@ -28,7 +28,7 @@
 #IfWinActive ahk_exe Chrome.exe
 $!g::SendInput {F3}
 $+!g::SendInput +{F3}
-$+!i::SendInput {F12}
+$#!i::SendInput {F12}
 #IfWinActive
 
 #IfWinNotActive ahk_class StarCraft II
