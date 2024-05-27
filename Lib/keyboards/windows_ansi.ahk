@@ -32,7 +32,7 @@ $#!i::SendInput {F12}
 $!+c::SendInput ^+C
 #IfWinActive
 
-#IfWinNotActive ahk_class StarCraft II
+#IfWinNotActive ahk_group games
 $!1::SendInput ^1
 $!2::SendInput ^2
 $!3::SendInput ^3
@@ -82,8 +82,10 @@ $!BS::SendInput {Delete}
 !t::SendInput ^t ; New tab in chrome
 !+t::SendInput ^+t ; re-open recently closed tabs in chrome, re-open recently closed editor in vscode/atom/sublime
 
+#IfWinNotActive ahk_group games
 !r::SendInput {F5} ; refresh
 !+r::SendInput ^{F5} ; hard refresh
+#IfWinNotActive
 !l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
 !,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
