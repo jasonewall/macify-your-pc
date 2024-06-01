@@ -15,6 +15,7 @@
 
 !n::SendInput ^n ; New file/window depending on app
 !+n::SendInput ^+n ; New window/new incognito window
+#IfWinNotActive ahk_group games
 !w::SendInput ^w ; Close tab in chrome/editor in vscode and probably sublime/atom
 !h::SendInput !{Esc} ; Hide window
 !m::SendInput #{Down} ; Minimize current window
@@ -22,6 +23,7 @@
                      ; Since is a Alt+F4 binding it also is an easy fall back for when the Cmd+W reflex doesn't work
                      ; in most other apps in windows.
 !q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
+#IfWinNotActive
 
 ; Quick Tab switching in chrome, also workspace switching in slack
 
