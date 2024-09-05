@@ -52,6 +52,7 @@ $!0::SendInput ^0
 +!k::SendInput +^k ; start dm
 !Up::SendInput ^{Up} ; edit last message
 
+#IfWinNotActive ahk_group games
 ; Clipboard operations
 !c::SendInput ^c
 !v::SendInput ^v
@@ -61,6 +62,7 @@ $!0::SendInput ^0
 !b::SendInput ^b
 !i::SendInput ^i
 !u::SendInput ^u
+#IfWInNotActive
 
 ; Text navigation from Mac
 $!Left::SendInput {Home}
