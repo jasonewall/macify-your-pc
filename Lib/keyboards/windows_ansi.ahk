@@ -80,8 +80,10 @@ $#+Right::SendInput +^{Right}
 ; Delete files in Finder/Explorer
 $!BS::SendInput {Delete}
 
+#IfWinNotActive ahk_group games
 !z::SendInput ^z ; Cmd+Z undo
 !+z::SendInput ^y ; Cmd+shift+z redo
+#IfWinNotActive
 
 !t::SendInput ^t ; New tab in chrome
 !+t::SendInput ^+t ; re-open recently closed tabs in chrome, re-open recently closed editor in vscode/atom/sublime
