@@ -116,6 +116,10 @@ $!BS::SendInput {Delete}
 ; Space
 +#m::MoomActivate()
 
+; mouse scroll cause I had a mouse wheel on the fritz and wanted a workaround for gaming
+^!Up::SendInput {WheelUp 1}
+^!Down::SendInput {WheelDown 1}
+
 ; Not all keyboards have media controls
 ; These aren't really replicating anything standard from MacoS
 ; Just something standard I would like for convenience in my Windows machines
