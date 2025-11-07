@@ -10,12 +10,12 @@
     SendInput #s ; Opens start menu search - which is basically the Windows equivalent of spotlight
     return
 
+#IfWinNotActive ahk_group games
 !o::SendInput ^o ; Open
 !s::SendInput ^s ; Save
 
 !n::SendInput ^n ; New file/window depending on app
 !+n::SendInput ^+n ; New window/new incognito window
-#IfWinNotActive ahk_group games
 !w::SendInput ^w ; Close tab in chrome/editor in vscode and probably sublime/atom
 !h::SendInput !{Esc} ; Hide window
 !m::SendInput #{Down} ; Minimize current window
@@ -91,11 +91,11 @@ $!BS::SendInput {Delete}
 #IfWinNotActive ahk_group games
 !r::SendInput {F5} ; refresh
 !+r::SendInput ^{F5} ; hard refresh
+!f::SendInput ^f ; cmd+f find in most apps
 #IfWinNotActive
 !l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
 !,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
-!f::SendInput ^f ; cmd+f find in most apps
 
 ; cmd+shift+[ & ] for tab navigation in chrome - can customize keyboard shortcuts in vscode so it works there too
 !+]::SendInput ^{Tab}
