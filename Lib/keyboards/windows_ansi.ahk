@@ -28,10 +28,10 @@
 ; Quick Tab switching in chrome, also workspace switching in slack
 
 #IfWinActive ahk_exe Chrome.exe
-$!g::SendInput {F3}
-$+!g::SendInput +{F3}
-$#!i::SendInput {F12}
-$!+c::SendInput ^+C
+$!g::SendInput {F3} ; Find next
+$+!g::SendInput +{F3}; Find previous
+$#!i::SendInput {F12}; Open dev tools
+$!+c::SendInput ^+C; Inspect Element
 IfWinActive
 
 #IfWinNotActive ahk_group games
