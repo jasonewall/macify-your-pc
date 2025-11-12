@@ -32,7 +32,7 @@ $!g::SendInput {F3} ; Find next
 $+!g::SendInput +{F3}; Find previous
 $#!i::SendInput {F12}; Open dev tools
 $!+c::SendInput ^+C; Inspect Element
-IfWinActive
+#IfWinActive
 
 #IfWinNotActive ahk_group games
 $!1::SendInput ^1
