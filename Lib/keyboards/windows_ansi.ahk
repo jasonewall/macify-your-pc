@@ -10,6 +10,7 @@
     SendInput #s ; Opens start menu search - which is basically the Windows equivalent of spotlight
     return
 
+#IfWinNotActive ahk_group games
 !o::SendInput ^o ; Open
 !s::SendInput ^s ; Save
 
@@ -22,15 +23,18 @@
                      ; Since is a Alt+F4 binding it also is an easy fall back for when the Cmd+W reflex doesn't work
                      ; in most other apps in windows.
 !q::SendInput ^q ; Quit for some apps, you can define this with custom keybindings in vscode/atom/sublime for additional support
+#IfWinNotActive
 
 ; Quick Tab switching in chrome, also workspace switching in slack
 
 #IfWinActive ahk_exe Chrome.exe
 $!g::SendInput {F3}
 $+!g::SendInput +{F3}
-#IfWinActive
+$#!i::SendInput {F12}
+$!+c::SendInput ^+C
+IfWinActive
 
-#IfWinNotActive ahk_class StarCraft II
+#IfWinNotActive ahk_group games
 $!1::SendInput ^1
 $!2::SendInput ^2
 $!3::SendInput ^3
@@ -48,6 +52,7 @@ $!0::SendInput ^0
 +!k::SendInput +^k ; start dm
 !Up::SendInput ^{Up} ; edit last message
 
+#IfWinNotActive ahk_group games
 ; Clipboard operations
 !c::SendInput ^c
 !v::SendInput ^v
@@ -57,6 +62,7 @@ $!0::SendInput ^0
 !b::SendInput ^b
 !i::SendInput ^i
 !u::SendInput ^u
+#IfWInNotActive
 
 ; Text navigation from Mac
 $!Left::SendInput {Home}
@@ -74,18 +80,22 @@ $#+Right::SendInput +^{Right}
 ; Delete files in Finder/Explorer
 $!BS::SendInput {Delete}
 
+#IfWinNotActive ahk_group games
 !z::SendInput ^z ; Cmd+Z undo
 !+z::SendInput ^y ; Cmd+shift+z redo
+#IfWinNotActive
 
 !t::SendInput ^t ; New tab in chrome
 !+t::SendInput ^+t ; re-open recently closed tabs in chrome, re-open recently closed editor in vscode/atom/sublime
 
+#IfWinNotActive ahk_group games
 !r::SendInput {F5} ; refresh
 !+r::SendInput ^{F5} ; hard refresh
+!f::SendInput ^f ; cmd+f find in most apps
+#IfWinNotActive
 !l::SendInput ^l ; focuses location bar in browsers, Ctrl+L is used in some other apps too.. it's handy
 !,::SendInput ^, ; ctrl+, is a common preferences short cut in windows now.. so this just maps cmd+, to do the same
 
-!f::SendInput ^f ; cmd+f find in most apps
 
 ; cmd+shift+[ & ] for tab navigation in chrome - can customize keyboard shortcuts in vscode so it works there too
 !+]::SendInput ^{Tab}
@@ -105,6 +115,10 @@ $!BS::SendInput {Delete}
 ; my activation shortcut is option+shift+m
 ; Space
 +#m::MoomActivate()
+
+; mouse scroll cause I had a mouse wheel on the fritz and wanted a workaround for gaming
+^!Up::SendInput {WheelUp 1}
+^!Down::SendInput {WheelDown 1}
 
 ; Not all keyboards have media controls
 ; These aren't really replicating anything standard from MacoS
