@@ -33,7 +33,7 @@ ToggleCapsLockState() {
     SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
 }
 
-+CapsLock::ToggleCapsLockCtrlMode()
++CapsLock::ToggleCapsLockMode()
 
 ToggleCapsLockMode() {
     global CapsLockMode
