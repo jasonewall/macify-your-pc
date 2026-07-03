@@ -5,14 +5,14 @@
 ; Once enabled:
 ; * Double-tapping caps lock toggles caps lock
 ; * Other wise caps lock functions as control
-CapsLockCtrlMode := "F"
+CapsLockMode := "F"
 
 CapsLock::HandleCapsLock()
 
 HandleCapsLock() {
-    global CapsLockCtrlMode
+    global CapsLockMode
 
-    if(CapsLockCtrlMode = "T") {
+    if(CapsLockMode = "F") {
         SendInput {CtrlDown}
         ; Wait forever until Capslock is released.
         KeyWait, CapsLock
@@ -35,15 +35,15 @@ ToggleCapsLockState() {
 
 +CapsLock::ToggleCapsLockCtrlMode()
 
-ToggleCapsLockCtrlMode() {
-    global CapsLockCtrlMode
-    CapsLockCtrlMode := (CapsLockCtrlMode = "T") ? "F" : "T"
-    mode_desc := (CapsLockCtrlMode = "T") ? "On" : "Off"
-    tool_tip := Format("CapsLock Is Control: {:s}", mode_desc)
+ToggleCapsLockMode() {
+    global CapsLockMode
+    CapsLockMode := (CapsLockMode = "T") ? "F" : "T"
+    mode_desc := (CapsLockMode = "T") ? "On" : "Off"
+    tool_tip := Format("CapsLock Is CapsLock: {:s}", mode_desc)
     ToolTip, %tool_tip%, 500, 500
-    SetTimer, RemoveCapsLockCtrlToolTip, -1500
+    SetTimer, RemoveCapsLockToolTip, -1500
 }
 
-RemoveCapsLockCtrlToolTip:
+RemoveCapsLockToolTip:
     ToolTip
     return
