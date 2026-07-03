@@ -29,8 +29,8 @@
 
 #IfWinActive ahk_exe Chrome.exe
 $!g::SendInput {F3} ; Find next
-$+!g::SendInput +{F3}; Find previous
-$#!i::SendInput {F12}; Open dev tools
+$+!g::SendInput +{F3} ; Find previous
+$#!i::SendInput {F12} ; Open dev tools
 $!+c::SendInput ^+C; Inspect Element
 #IfWinActive
 
